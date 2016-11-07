@@ -1,2 +1,12 @@
-<h2>Привет! </h2> Меня зовут, <?php echo isset($name)? $name : 'Гость'; ?>. 
-Мне <?php echo $age; ?> лет.
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title><?php echo $title; ?></title>
+<meta name="description" content="<?php echo $description; ?>" />
+</head>
+ 
+<body>
+    <?php echo $content; ?>
+</body>
+</html>

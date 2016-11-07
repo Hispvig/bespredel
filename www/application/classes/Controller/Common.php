@@ -1,14 +1,13 @@
 <?php defined('SYSPATH') or die('No direct script access.');
 
 class Controller_Common extends Controller_Template {
- 
-    public function action_index()
+	public $template = 'common';
+	public function before()
     {
-        $content = View::factory('common')
-              ->bind('age', $age);
-        $age = 'больше 18';
-        $content->name = 'Васька';
-        $this->template->content = $content;
+        parent::before();
+        View::set_global(Kohana::$config->load('mysite')->as_array());				
+        $this->template->content = '';
+        $this->template->styles = '';
+        $this->template->scripts = '';
     }
- 
 }
